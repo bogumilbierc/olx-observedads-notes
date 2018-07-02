@@ -22,20 +22,21 @@ function init() {
 function addNotesButtonToAllAdds() {
     console.log('Trying to add Notes Button to all adds');
     const observedAdsLis = $("li.observedad[data-adid]");
-
     $(observedAdsLis).each(function (index, item) {
-        const favtabDiv = item.querySelector('.favtab.br3.abs.zi4.observelinkgallery');
-        $(favtabDiv).prepend('<a class="custom-notes-button">N</a>')
-
-        const customAnchor = favtabDiv.querySelector(".custom-notes-button");
-
-        $(customAnchor).click(function () {
-            openNotesWidget($(item).data('adid'));
-        });
-
+        addNotesButtonToAdd(item);
     });
 
+}
 
+function addNotesButtonToAdd(addListItem) {
+    const favtabDiv = addListItem.querySelector('.favtab.br3.abs.zi4.observelinkgallery');
+    $(favtabDiv).prepend('<a class="custom-notes-button">N</a>');
+
+    const customAnchor = favtabDiv.querySelector(".custom-notes-button");
+
+    $(customAnchor).click(function () {
+        openNotesWidget($(addListItem).data('adid'));
+    });
 }
 
 function openNotesWidget(adid) {
