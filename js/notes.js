@@ -30,11 +30,11 @@ function addNotesButtonToAllAdds() {
 
 function addNotesButtonToAdd(addListItem) {
     const favtabDiv = addListItem.querySelector('.favtab.br3.abs.zi4.observelinkgallery');
-    $(favtabDiv).prepend('<a class="custom-notes-button">N</a>');
+    $(favtabDiv).prepend('<img class="custom-notes-button" style="height: 20px;position: absolute;right: 20px;" src="' + chrome.runtime.getURL('/icons/32.png') + '"/>');
 
-    const customAnchor = favtabDiv.querySelector(".custom-notes-button");
+    const notesButton = favtabDiv.querySelector(".custom-notes-button");
 
-    $(customAnchor).click(function () {
+    $(notesButton).click(function () {
         openNotesWidget($(addListItem).data('adid'));
     });
 }
