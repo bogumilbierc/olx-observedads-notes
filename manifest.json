@@ -22,7 +22,6 @@
       "128": "icons/128.png",
       "490": "icons/490.png"
     },
-    "default_popup": "popup.html",
     "default_title": "OLX notes settings"
   },
   "content_scripts": [

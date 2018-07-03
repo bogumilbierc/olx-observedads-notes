@@ -20,7 +20,7 @@ function loadDataFromChromeStorage() {
         if (obj !== null && obj.hasOwnProperty('notesForAds')) {
             var hatedKeywordsJSON = obj['notesForAds'];
             notesForAds = JSON.parse(hatedKeywordsJSON);
-            console.log('OLX Observed ads notes: Settings loaded');
+            console.log('OLX Observed ads notes: Notes reloaded from Chrome storage');
             addNotesButtonToAllAdds();
         } else {
             addNotesButtonToAllAdds();
@@ -29,7 +29,6 @@ function loadDataFromChromeStorage() {
 }
 
 function addNotesButtonToAllAdds() {
-    console.log('Trying to add Notes Button to all adds');
     const observedAdsLis = $("li.observedad[data-adid]");
     $(observedAdsLis).each(function (index, item) {
         addNotesButtonToAdd(item);
@@ -78,7 +77,7 @@ function storeDataInChromeStorage() {
     // Save it using the Chrome extension storage API.
     chrome.storage.sync.set({'notesForAds': jsonToSave}, function () {
         // Notify that we saved.
-        console.log('OLX Observed ads notes: Settings saved');
+        console.log('OLX Observed ads notes: Notes saved to Chrome storage');
     });
 }
 
