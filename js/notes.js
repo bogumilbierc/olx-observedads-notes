@@ -40,6 +40,11 @@ function addNotesButtonToAdd(addListItem) {
 }
 
 function openNotesWidget(adid) {
-    console.log('Notes widget for: ' + adid);
-    const noteText = prompt('Enter note');
+    const adLi = $("li.observedad[data-adid=" + adid + "]");
+    const textareaForAd = $("textarea[data-adid=" + adid + "]");
+    if (!textareaForAd || textareaForAd.length === 0) {
+        adLi.append('<textarea data-adid="' + adid + '" style="resize: auto; width: 95%; margin-bottom: 35px"></textarea>');
+        $(adLi).css("height", "auto");
+    }
+
 }
