@@ -28,8 +28,4 @@ chrome://extensions/
 7. Done! :)
 
 ## Defining settings
-1. Click on the "subtitle" button in Extensions toolbar:
-![screen](https://github.com/bogumilbierc/ShowmaxSubtitleResizer/blob/master/instruction/ExtensionsToolbar.PNG)
-2. Type settings and click save
-![screen](https://github.com/bogumilbierc/ShowmaxSubtitleResizer/blob/master/instruction/Preview.PNG)
-3. Enjoy
+//todo
